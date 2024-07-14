@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Mod Editor{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">Mod Editor - {{ mod_type.name if mod_type else mod.name }}</h1>
+    <p>You are editing: {{ mod_type.name if mod_type else mod.name }}</p>
+
+    {% if mod_type.name == 'Advanced Empire Creator' %}
+        <div class="editor-section">
+            <h3>Advanced Empire Creator</h3>
+            <form>
+                <div class="form-group">
+                    <label for="empireName">Empire Name</label>
+                    <input type="text" class="form-control" id="empireName" placeholder="Enter empire name">
+                </div>
+                <div class="form-group">
+                    <label for="leaderName">Leader Name</label>
+                    <input type="text" class="form-control" id="leaderName" placeholder="Enter leader name">
+                </div>
+                <!-- Add more fields specific to Advanced Empire Creator -->
+                <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+        </div>
+    {% elif mod_type.name == 'Mod Type 2' %}
+        <div class="editor-section">
+            <h3>Mod Type 2</h3>
+            <!-- Dummy content for Mod Type 2 -->
+            <p>Editor content for Mod Type 2 will go here.</p>
+        </div>
+    {% elif mod_type.name == 'Mod Type 3' %}
+        <div class="editor-section">
+            <h3>Mod Type 3</h3>
+            <!-- Dummy content for Mod Type 3 -->
+            <p>Editor content for Mod Type 3 will go here.</p>
+        </div>
+    {% else %}
+        <div class="editor-section">
+            <h3>Unknown Mod Type</h3>
+            <p>Mod type not recognized.</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

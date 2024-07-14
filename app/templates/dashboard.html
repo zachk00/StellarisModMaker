@@ -1,11 +1,32 @@
 {% extends "base.html" %}
 
-{% block title %}Dashboard - Stellaris Mod-Maker{% endblock %}
+{% block title %}Dashboard{% endblock %}
 
 {% block content %}
-<div class="dashboard-container">
-    <h2>Welcome to your dashboard, {{ current_user.username }}!</h2>
-    <p>This is a placeholder for your dashboard content.</p>
-    <a href="{{ url_for('auth.logout') }}">Logout</a>
+<div class="container mt-5">
+    
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Create New Mod</h3>
+            <ul class="list-group">
+                {% for mod_type in mod_types %}
+                <li class="list-group-item">
+                    <a href="{{ url_for('main.mod_editor', mod_type=mod_type.name) }}">{{ mod_type.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md-8">
+            <h3>My Mods</h3>
+            <ul class="list-group">
+                {% for mod in user_mods %}
+                <li class="list-group-item">
+                    <a href="{{ url_for('main.mod_editor', mod_id=mod.id) }}">{{ mod.name }}</a>
+                    <span class="badge badge-primary">{{ mod.status }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>
 {% endblock %}
