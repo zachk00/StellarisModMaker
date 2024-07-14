@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Stellaris Mod-Maker{% endblock %}
+
+{% block content %}
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Create Your Own Stellaris Mods</h1>
+        <p>Unleash your creativity and bring your ideas to life with our easy-to-use mod-making tool.</p>
+        <button class="cta-button">Get Started</button>
+    </div>
+</section>
+
+<section id="features" class="features">
+    <h2>Features</h2>
+    <div class="features-container">
+        <div class="feature-item">
+            <img src="{{ url_for('static', filename='images/feature1.png') }}" alt="Feature 1">
+            <h3>Feature 1</h3>
+            <p>Brief description of feature 1.</p>
+        </div>
+        <div class="feature-item">
+            <img src="{{ url_for('static', filename='images/feature2.png') }}" alt="Feature 2">
+            <h3>Feature 2</h3>
+            <p>Brief description of feature 2.</p>
+        </div>
+        <div class="feature-item">
+            <img src="{{ url_for('static', filename='images/feature3.png') }}" alt="Feature 3">
+            <h3>Feature 3</h3>
+            <p>Brief description of feature 3.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

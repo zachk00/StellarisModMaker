@@ -1,0 +1,231 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1b1b1b;
+}
+
+header .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    flex: 1;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: url('path/to/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Features section styles */
+.features {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.feature-item {
+    max-width: 300px;
+    text-align: center;
+}
+
+.feature-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.feature-item p {
+    font-size: 16px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer .social-media {
+    margin-bottom: 10px;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Authentication container */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.auth-container .form-group {
+    margin-bottom: 15px;
+}
+
+.auth-container .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.auth-container .form-group input {
+    width: calc(100% - 20px); /* Ensure inputs take full width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 10px; /* Add margin to align with the labels */
+}
+
+.auth-container button {
+    width: calc(100% - 20px); /* Ensure button takes full width */
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px; /* Add margin to align with the inputs */
+}
+
+.auth-container button:hover {
+    background-color: #0056b3;
+}
+
+.auth-container a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Flash messages */
+.flash-messages {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    width: 300px;
+}
+
+.flash {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #fff;
+    opacity: 0.9;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.flash.success {
+    background-color: #28a745;
+}
+
+.flash.danger {
+    background-color: #dc3545;
+}
+
+.flash.info {
+    background-color: #17a2b8;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    padding: 20px;
+    text-align: center;
+}
